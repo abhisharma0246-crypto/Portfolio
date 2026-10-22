@@ -1,0 +1,474 @@
+/* =========================
+   1. Theme and reset
+========================= */
+
+:root {
+    color-scheme: dark;
+    --bg: #0b1020;
+    --surface: #11182b;
+    --surface-alt: #0e1527;
+    --card: #151e33;
+    --text: #edf2ff;
+    --muted: #a1acc4;
+    --border: #27334c;
+    --primary: #8b7cff;
+    --secondary: #4ecbff;
+    --header-bg: rgba(11, 16, 32, 0.85);
+    --shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+body.light-theme {
+    color-scheme: light;
+    --bg: #f7f8fc;
+    --surface: #ffffff;
+    --surface-alt: #edf1fa;
+    --card: #ffffff;
+    --text: #182238;
+    --muted: #5c6880;
+    --border: #dce2ef;
+    --primary: #6755db;
+    --secondary: #087eae;
+    --header-bg: rgba(255, 255, 255, 0.88);
+    --shadow: 0 15px 40px rgba(32, 47, 83, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    transition: background 0.3s, color 0.3s;
+}
+
+body,
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 4px;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin-inline: auto;
+}
+
+section {
+    scroll-margin-top: 85px;
+}
+
+::selection {
+    background: var(--primary);
+    color: white;
+}
+
+/* =========================
+   2. Header and navigation
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--header-bg);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--secondary);
+}
+
+.theme-toggle,
+.menu-toggle {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    border-radius: 12px;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.theme-toggle:hover,
+.menu-toggle:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 21px;
+}
+
+/* =========================
+   3. Hero
+========================= */
+
+.hero {
+    min-height: 650px;
+    padding-block: 100px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.eyebrow {
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: #43d9a3;
+    box-shadow: 0 0 12px #43d9a3;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5.5vw, 65px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.gradient-text {
+    background: linear-gradient(
+        110deg,
+        var(--primary),
+        var(--secondary)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-subtitle {
+    font-size: clamp(22px, 3vw, 32px);
+    margin-bottom: 20px;
+}
+
+#typing-text {
+    color: var(--secondary);
+}
+
+.typing-cursor {
+    color: var(--primary);
+    animation: blink 0.8s steps(2) infinite;
+}
+
+.hero-description {
+    color: var(--muted);
+    max-width: 580px;
+    font-size: 16px;
+}
+
+.hero-buttons,
+.social-links,
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+}
+
+.hero-buttons {
+    margin-top: 32px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s,
+                background 0.25s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background: linear-gradient(110deg, var(--primary), #6254df);
+    color: white;
+    box-shadow: 0 8px 25px rgba(112, 94, 230, 0.2);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 12px 32px rgba(112, 94, 230, 0.35);
+}
+
+.btn-secondary {
+    border-color: var(--border);
+    color: var(--text);
+    background: var(--surface);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary);
+}
+
+.social-links {
+    margin-top: 30px;
+    gap: 25px;
+}
+
+.social-links a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--muted);
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--secondary);
+}
+
+/* Code illustration */
+
+.hero-visual {
+    min-height: 340px;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.code-card {
+    width: 100%;
+    max-width: 420px;
+    z-index: 2;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transform: rotate(1deg);
+    transition: transform 0.35s;
+}
+
+.code-card:hover {
+    transform: rotate(0deg) translateY(-5px);
+}
+
+.code-card-header {
+    min-height: 52px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+}
+
+.code-card-header > span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #ff6b6b;
+}
+
+.code-card-header > span:nth-child(2) {
+    background: #ffc857;
+}
+
+.code-card-header > span:nth-child(3) {
+    background: #43d9a3;
+}
+
+.code-card-header small {
+    color: var(--muted);
+    margin-left: auto;
+}
+
+.code-card pre {
+    overflow-x: auto;
+    padding: 26px 20px;
+    font-size: clamp(11px, 1.3vw, 14px);
+    line-height: 2;
+}
+
+.code-purple {
+    color: #c6a5ff;
+}
+
+.code-blue {
+    color: #70c9ff;
+}
+
+.code-green {
+    color: #7ee6b0;
+}
+
+.orbit {
+    position: absolute;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.orbit-one {
+    width: 350px;
+    height: 350px;
+    animation: spin 25s linear infinite;
+}
+
+.orbit-two {
+    width: 290px;
+    height: 290px;
+    border-style: dashed;
+    animation: spin 35s linear infinite reverse;
+}
+
+.floating-tag {
+    position: absolute;
+    z-index: 3;
+    padding: 10px 15px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card);
+    box-shadow: var(--shadow);
+    font-size: 13px;
+    font-weight: 700;
+    animation: float 4s ease-in-out infinite;
+}
+
+.tag-one {
+    top: 10%;
+    right: -2%;
+}
+
+.tag-two {
+    bottom: 9%;
+    left: -3%;
+    animation-delay: -2s;
+}
+
+/* =========================
+   4. Sections and headings
+========================= */
+
+.section {
+    padding-block: 100px;
+}
+
+.section-alt {
+    background: var(--surface-alt);
+    border-block: 1px solid var(--border);
+    padding-block: 100px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 10px;
+}
+
+.section-heading h2,
+.contact-content h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.section-heading > p:last-child {
+    margin-top: 14px;
+    color: var(--muted);
+}
+
+/* =========================
+   5. About cards
+========================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.about-card,
+.skill-card,
+.project-card {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--card);
+    transition: transform 0.25s, border-color 0.25s,
+                box-shadow 0.25s;
+}
+
+.about-card {
+    padding: 28

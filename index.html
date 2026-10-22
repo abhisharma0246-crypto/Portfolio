@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Abhishek Sharma's developer portfolio, skills, projects and contact information.">
+
+    <title>Abhishek Sharma | Developer Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a href="#home" class="logo">AS<span>.</span></a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="nav-links">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle"
+                    aria-label="Switch to light theme"
+                    title="Toggle theme">
+                ☀
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero container" id="home">
+            <div class="hero-content reveal">
+                <p class="eyebrow">
+                    <span class="status-dot"></span>
+                    B.TECH CSE STUDENT
+                </p>
+
+                <h1>
+                    Hi, I'm <span class="gradient-text">Abhishek Sharma.</span>
+                </h1>
+
+                <h2 class="hero-subtitle">
+                    I'm a <span id="typing-text">Developer</span><span
+                    class="typing-cursor">|</span>
+                </h2>
+
+                <p class="hero-description">
+                    I enjoy turning ideas into practical digital solutions.
+                    I'm learning, building projects, and exploring the world
+                    of software development, AI, and data analytics.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        Explore My Projects ↗
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary">
+                        Let's Connect
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="PLACEHOLDER_GITHUB_URL"
+                       target="_blank" rel="noopener noreferrer">
+                        GitHub ↗
+                    </a>
+
+                    <a href="PLACEHOLDER_LINKEDIN_URL"
+                       target="_blank" rel="noopener noreferrer">
+                        LinkedIn ↗
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal" aria-label="Developer illustration">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span></span><span></span><span></span>
+                        <small>developer.py</small>
+                    </div>
+
+                    <pre><code><span class="code-purple">class</span> <span class="code-blue">Developer</span>:
+    name = <span class="code-green">"Abhishek"</span>
+    role = <span class="code-green">"CSE Student"</span>
+
+    <span class="code-purple">def</span> <span class="code-blue">build</span>(self):
+        <span class="code-purple">return</span> <span class="code-green">"Ideas → Projects"</span>
+
+me = Developer()
+me.build()</code></pre>
+                </div>
+
+                <span class="floating-tag tag-one">💻 Coding</span>
+                <span class="floating-tag tag-two">🚀 Building</span>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section container reveal" id="about">
+            <div class="section-heading">
+                <p class="eyebrow">GET TO KNOW ME</p>
+                <h2>About <span class="gradient-text">Me</span></h2>
+                <p>A little about my journey and what motivates me.</p>
+            </div>
+
+            <div class="about-grid">
+                <article class="about-card">
+                    <span class="card-icon">🎓</span>
+                    <h3>My Background</h3>
+                    <p>
+                        I'm a B.Tech Computer Science Engineering student at
+                        JECRC University, Jaipur. I'm developing my programming
+                        skills through coursework and hands-on projects.
+                    </p>
+                </article>
+
+                <article class="about-card">
+                    <span class="card-icon">💡</span>
+                    <h3>My Interests</h3>
+                    <p>
+                        I'm interested in software development, artificial
+                        intelligence, computer vision, and data analytics.
+                        I enjoy experimenting with new technologies.
+                    </p>
+                </article>
+
+                <article class="about-card">
+                    <span class="card-icon">🎯</span>
+                    <h3>My Goal</h3>
+                    <p>
+                        My goal is to become a skilled software developer
+                        and data analyst by strengthening my fundamentals
+                        and building useful, real-world projects.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section section-alt" id="skills">
+            <div class="container reveal">
+                <div class="section-heading">
+                    <p class="eyebrow">WHAT I WORK WITH</p>
+                    <h2>My <span class="gradient-text">Skills</span></h2>
+                    <p>Technologies I'm exploring and developing my skills in.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <span class="skill-icon">C</span>
+                        <h3>C</h3>
+                        <p>Programming fundamentals</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">C++</span>
+                        <h3>C++</h3>
+                        <p>OOP and problem solving</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">Py</span>
+                        <h3>Python</h3>
+                        <p>Programming and automation</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">&lt;/&gt;</span>
+                        <h3>HTML & CSS</h3>
+                        <p>Webpage structure and design</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">DB</span>
+                        <h3>MySQL</h3>
+                        <p>Database fundamentals</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">Git</span>
+                        <h3>Git & GitHub</h3>
+                        <p>Version control and projects</p>
+                    </article>
+                </div>
+
+                <p class="skills-note">
+                    These represent my current learning areas, not a
+                    certified assessment of proficiency.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section container reveal" id="projects">
+            <div class="section-heading">
+                <p class="eyebrow">THINGS I'VE BUILT</p>
+                <h2>Featured <span class="gradient-text">Projects</span></h2>
+                <p>A selection of my programming and problem-solving work.</p>
+            </div>
+
+            <div class="project-filters" aria-label="Filter projects">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="ai">AI & Innovation</button>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card" data-category="python ai">
+                    <div class="project-top">
+                        <span class="project-emoji">👁️</span>
+                        <span class="project-type">Computer Vision</span>
+                    </div>
+                    <h3>Face Recognition Attendance</h3>
+                    <p>
+                        A Python-based attendance project exploring face
+                        recognition, webcam input, and attendance records.
+                    </p>
+                    <div class="tech-tags">
+                        <span>Python</span><span>OpenCV</span><span>Excel</span>
+                    </div>
+                    <a href="PLACEHOLDER_PROJECT_LINK_1"
+                       target="_blank" rel="noopener noreferrer"
+                       class="project-link">
+                        View Project ↗
+                    </a>
+                </article>
+
+                <article class="project-card" data-category="python">
+                    <div class="project-top">
+                        <span class="project-emoji">🎙️</span>
+                        <span class="project-type">Automation</span>
+                    </div>
+                    <h3>Hey Jarvis Voice Assistant</h3>
+                    <p>
+                        A voice assistant project exploring speech input,
+                        AI-generated responses, and desktop interactions.
+                    </p>
+                    <div class="tech-tags">
+                        <span>Python</span><span>Speech</span><span>GUI</span>
+                    </div>
+                    <a href="PLACEHOLDER_PROJECT_LINK_2"
+                       target="_blank" rel="noopener noreferrer"
+                       class="project-link">
+                        View Project ↗
+                    </a>
+                </article>
+
+                <article class="project-card" data-category="ai">
+                    <div class="project-top">
+                        <span class="project-emoji">🤝</span>
+                        <span class="project-type">SIH Concept</span>
+                    </div>
+                    <h3>Skill Setu Marketplace</h3>
+                    <p>
+                        A digital marketplace concept connecting households
+                        and institutions with verified local skilled workers.
+                    </p>
+                    <div class="tech-tags">
+                        <span>AI</span><span>Geolocation</span><span>Cloud</span>
+                    </div>
+                    <a href="PLACEHOLDER_PROJECT_LINK_3"
+                       target="_blank" rel="noopener noreferrer"
+                       class="project-link">
+                        View Project ↗
+                    </a>
+                </article>
+
+                <article class="project-card" data-category="web">
+                    <div class="project-top">
+                        <span class="project-emoji">🌐</span>
+                        <span class="project-type">Web Development</span>
+                    </div>
+                    <h3>Personal Portfolio</h3>
+                    <p>
+                        A responsive portfolio website built to present my
+                        background, skills, projects, and learning journey.
+                    </p>
+                    <div class="tech-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <a href="#home" class="project-link">
+                        You're viewing it ↗
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section section-alt" id="contact">
+            <div class="container contact-content reveal">
+                <p class="eyebrow">HAVE AN IDEA?</p>
+                <h2>Let's build something <span class="gradient-text">great.</span></h2>
+                <p>
+                    I'm interested in learning, collaborating, and working
+                    on meaningful technology projects.
+                </p>
+
+                <div class="contact-actions">
+                    <a href="mailto:PLACEHOLDER_YOUR_EMAIL"
+                       class="btn btn-primary">
+                        Get in Touch ↗
+                    </a>
+
+                    <button class="btn btn-secondary" id="copy-email"
+                            data-email="PLACEHOLDER_YOUR_EMAIL">
+                        Copy Email
+                    </button>
+                </div>
+
+                <p class="copy-message" id="copy-message"
+                   role="status" aria-live="polite"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#home" class="logo">AS<span>.</span></a>
+            <p>Designed and built by Abhishek Sharma.</p>
+            <a href="#home" class="back-to-top">Back to top ↑</a>
+        </div>
+        <p class="copyright">© <span id="year"></span> Abhishek Sharma. All rights reserved.</p>
+    </footer>
+</body>
+</html>
